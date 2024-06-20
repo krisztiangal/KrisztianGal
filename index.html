@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Krisztian Gal</title>
+        <style>
+            @font-face {
+                font-family: 'Quantify';
+                src: url('fonts/Quantify.ttf');
+                font-weight: 300;
+                font-style: 100%;
+                color: #002D72;
+            }
+            @font-face {
+                font-family: 'Astonpoliz';
+                src: url('fonts/Astonpoliz.ttf');
+                font-weight:200;
+                color: #002D72;
+            }
+            body {
+                margin:0;
+                padding:0;
+                background-color: #B0C4DE;
+                font-family: 'Astonpoliz';
+                /*overflow-x:hidden;*/
+            }
+            a {
+                color: #002D72;
+                text-decoration: none;
+                font-style:italic;
+            }
+            a:hover {
+                color: #AFEEEE;
+            }
+            /*-------------------------------------------------*/
+            #mainPic {
+                width: 50%;
+                margin: 0;
+                height: auto;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                border-bottom-left-radius: 8%;
+                border-left: 5px solid #002D72;
+                border-bottom: 5px solid #002D72;
+                box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+            }
+            #firstPage {
+                width:100%;
+                padding:0;
+                margin:0;
+                overflow:hidden;
+            }
+            .header {
+                font-size: 6vw;
+                margin-left: 5%;
+                margin-top: 8%;
+                font-family: 'Quantify', sans-serif;
+                line-height: 1.7;
+                font-stretch: 110%;
+                font-weight: 180;
+                color:#002D72;
+            }
+            #headerContainer {
+                width:90vw;
+            }
+            .text {
+                font-size:2vw;
+                font-family: 'Astonpoliz', sans-serif;
+                color:#002D72;
+            }
+            .leftColoumn {
+                width: 38%;
+                left:5vw;
+            }
+            .rightColoumn {
+                width: 57%;
+            }
+            #table {
+                margin-left: auto;
+                margin-right: 5%;
+                position: relative;
+                width: 85%;
+                height:auto;
+            }
+            #contact {
+                position: relative;
+                width:55%;
+                right: 5%;
+                top:2%;
+                left:45%;
+            }
+            #bgText {
+                position:absolute;
+                width:100%;
+                z-index:-1;
+                top:0;
+                right:0;
+                left:6.5%;
+                bottom:0;
+                text-align: center;
+                font-size: 10.5vw;
+                overflow: hidden;
+                opacity: 0.12;
+                font-family: 'Quantify';
+                font-weight:700;
+                
+            }
+            #leftCont {
+                text-align: left;
+                list-style-type: none;
+            }
+            #rightCont {
+                text-align: right;
+                list-style-type: none;
+            }
+            .contactPic {
+                height: 2vw;
+                width: auto;
+            }
+            /*--------------------------------------------*/
+            #photoPage {
+                display:grid;
+                margin: 0 auto;
+                padding:0 auto;
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(3, 1fr);
+                grid-auto-rows: minmax(7vw, auto);
+                position:relative;
+                height:fit-content;
+                background-position: center;
+                background-image:url('BG.JPG');
+                background-color: rgba(255,255,255,0.1);
+                background-blend-mode:color-burn;
+                margin:0px;
+                background-size: cover;
+                z-index: -1;
+                padding:0;
+                margin:0;
+            }
+            #header2 {
+                color: #B0C4DE;
+            }
+            .gallery {
+                width: 32%;
+                max-width:700px;
+                height:auto;
+                border-radius:8%;
+                border: 5px, solid, #002D72;
+                object-fit: cover;
+                box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+            }
+            #pic1 {
+                width:45%;
+                position:absolute;
+                top:27%;
+                right: 30%;
+                z-index:2;
+            }
+            #pic2 {
+                width:45%;
+                position:absolute;
+                z-index:1;
+                top:2%;
+                right:2%;
+            }
+            #pic3 {
+                width:45%;
+                position:absolute;
+                z-index:3;
+                left:2%;
+                top:45%;
+                bottom:2%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="firstPage">
+            <div id="headerContainer">
+                <h1 class="header"> Krisztian Gal </h1>
+            </div>
+            <div class="leftColoumn">
+                <ul class="text" id="list">
+                    <li>IT student</li>
+                    <li>Web3 investor</li>
+                    <li>Hobby photographer</li>
+                    <li>History, psychology, crime and sci-fi reader</li>
+                    <li>born in Hungary, living in Finland</li>
+                    <li>you can find me in the nature or on the football pitch</li>
+                </ul>
+            </div>
+            <div>
+                <img src="me.jpg" id="mainPic" class="pic">
+            </div>
+            <div id="contact">
+                <div id="bgText">Contact</div>
+                <div>
+                    <table id="table">
+                        <td>
+                            <ul class="text" id="leftCont">
+                                <li id="insta"><img src="insta.png" class="contactPic"><a href="https://www.instagram.com/krisztian.inj/" target="_blank"> krisztian.inj</a></li>
+                                <li id="x"><img src="x.png" class="contactPic"><a href="https://x.com/krisztian_inj" target="_blank"> krisztian_inj</a></li>
+                                <li id="github"><img src="github.png" class="contactPic"><a href="https://github.com/krisztiangal" target="_blank"> krisztiangal</a></li>
+                        </ul>
+                        </td>
+                        <td>
+                            <ul class="text" id="rightCont">
+                                <li><a href="mailto:contact@krisztian.fi"> contact@krisztian.fi  </a><img src='email.png' class="contactPic"></li>
+                                <li><a href="tel:+358406403037"> +358406403037  </a><img src="phone.png" class="contactPic"></li>
+                            </ul>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="photoPage">
+            <div>
+                <h1 class="header" id="header2"> Photography </h1>
+            </div>
+            <div>
+                <img class="gallery" id="pic1" src="crane.JPG">
+            </div>
+            <div>
+                <img class="gallery" id="pic2" src="butterfly.JPG">               
+            </div>
+            <div>
+                <img class="gallery" id="pic3" src="snowflower.JPG">        
+            </div>
+        </div>
+    </body>
+    </html>
