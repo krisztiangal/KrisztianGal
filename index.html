@@ -30,7 +30,7 @@
                     --hover-color: #9290C3;
                 }
             }
-            /*-----------------------------------------------------*/
+            /*-----------------------------------------------------------------------------------------------------------------------------------*/
             body {
                 margin:0;
                 padding:0;
@@ -47,10 +47,12 @@
             a:hover {
                 color: var(--hover-color);
             }
-            /*-------------------------------------------------*/
+            /*-------------------------------------------------------------------------------------------------------------------------------------*/
             #mainPic {
-                width: 50%;
-                margin: 0;
+                width: 40%;
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 2%;
                 height: auto;
                 position: absolute;
                 top: 0px;
@@ -68,8 +70,8 @@
             }
             .header {
                 font-size: 6vw;
-                margin-left: 5%;
-                margin-top: 8%;
+                margin-left: 7%;
+                margin-top: 1%;
                 font-family: 'Quantify', sans-serif;
                 line-height: 1.7;
                 font-stretch: 110%;
@@ -89,48 +91,53 @@
                 width: 50%;
             }
             .leftColoumn {
-                width: 50%;
-                left:5vw;
+                margin-left:1%;
+                width: 55%;
             }
             .rightColoumn {
                 width: 57%;
             }
-            #table {
-                margin-left: auto;
-                margin-right: 5%;
-                position: relative;
-                width: 85%;
-                height:auto;
-            }
             #contact {
                 position: relative;
-                width:55%;
-                right: 5%;
-                top:2%;
-                left:45%;
-            }
+                /*display:flex;*/
+                overflow: hidden;
+                margin-left:4%;
+                width:42%;
+            }       
             #bgText {
                 position:absolute;
                 width:100%;
                 z-index:-1;
                 top:0;
                 right:0;
-                left:6.5%;
+                left:0%;
                 bottom:0;
                 text-align: center;
-                font-size: 10.5vw;
-                overflow: hidden;
+                font-size: 10vw;
                 opacity: 0.12;
                 font-family: 'Quantify';
                 font-weight:700;
-                
+            }
+            #smolCont {
+                display:flex;
+                flex-direction: row;
+                height: 100%;
             }
             #leftCont {
-                text-align: left;
+                width:16vw;
+                flex: 1;
                 list-style-type: none;
             }
             #rightCont {
-                width:22vw;
+                width:21vw;
+                flex: 1;
+                /*align-items: center;
+                justify-content: center;*/
+                padding-top:8%;
+                margin-left:0;
+                padding-left:0;
+                margin-right:0;
+                padding-right:0;
                 text-align: right;
                 list-style-type: none;
             }
@@ -138,7 +145,7 @@
                 height: 2vw;
                 width: auto;
             }
-            /*--------------------------------------------*/
+            /*---------------------------------------------------------------------------------------------------------------------------------------
             #photoPage {
                 display:grid;
                 margin: 0 auto;
@@ -193,7 +200,7 @@
                 left:2%;
                 top:45%;
                 bottom:2%;
-            }
+            }*/
         </style>
     </head>
 
@@ -213,19 +220,32 @@
                     <li>you can find me in the nature or on the football pitch</li>
                 </ul>
             </div>
-            <div>
-                <img src="me.jpg" id="mainPic" class="pic">
+            <div class="rightColoumn">
+                <img src="me2.jpg" id="mainPic" class="pic">
             </div>
             <div id="contact">
                 <div id="bgText">Contact</div>
-                <div>
-                    <table id="table">
+                <div id="smolCont">
+                    <div>
+                        <ul class="text" id="leftCont">
+                            <li id="insta"><img src="insta.png" class="contactPic"><a href="https://www.instagram.com/krisztian.fi/" target="_blank"> krisztian.fi</a></li>
+                            <li id="x"><img src="x.png" class="contactPic"><a href="https://x.com/krisztian_fi" target="_blank"> krisztian_fi</a></li>
+                            <li id="github"><img src="github.png" class="contactPic"><a href="https://github.com/krisztiangal" target="_blank"> krisztiangal</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text" id="rightCont">
+                            <li><a href="mailto:contact@krisztian.fi"> contact@krisztian.fi  </a><img src='email.png' class="contactPic"></li>
+                            <li><a href="tel:+358406403037"> +358406403037  </a><img src="phone.png" class="contactPic"></li>
+                        </ul>
+                    </div>
+                    <!-- <table id="table">
                         <td>
                             <ul class="text" id="leftCont">
                                 <li id="insta"><img src="insta.png" class="contactPic"><a href="https://www.instagram.com/krisztian.fi/" target="_blank"> krisztian.fi</a></li>
                                 <li id="x"><img src="x.png" class="contactPic"><a href="https://x.com/krisztian_fi" target="_blank"> krisztian_fi</a></li>
                                 <li id="github"><img src="github.png" class="contactPic"><a href="https://github.com/krisztiangal" target="_blank"> krisztiangal</a></li>
-                        </ul>
+                            </ul>
                         </td>
                         <td>
                             <ul class="text" id="rightCont">
@@ -233,11 +253,11 @@
                                 <li><a href="tel:+358406403037"> +358406403037  </a><img src="phone.png" class="contactPic"></li>
                             </ul>
                         </td>
-                    </table>
+                    </table> -->
                 </div>
             </div>
-        </div>
-        <div id="photoPage">
+        </div> 
+        <!-- <div id="photoPage">
             <div>
                 <h1 class="header" id="header2"> Photography </h1>
             </div>
@@ -250,6 +270,6 @@
             <div>
                 <img class="gallery" id="pic3" src="alps.JPG">        
             </div>
-        </div>
+        </div> -->
     </body>
     </html>
