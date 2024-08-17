@@ -48,7 +48,7 @@
                 color: var(--hover-color);
             }
             /*-------------------------------------------------------------------------------------------------------------------------------------*/
-            #mainPic {
+            #pic {
                 width: 40%;
                 margin-top: 0;
                 margin-right: 0;
@@ -62,7 +62,7 @@
                 border-bottom: 5px solid var(--text-color);
                 box-shadow: 0 0 10px 5px var(--shadow-color);
             }
-            #firstPage {
+            #info {
                 width:100%;
                 padding:0;
                 margin:0;
@@ -90,12 +90,9 @@
                 height: auto;
                 width: 50%;
             }
-            .leftColoumn {
+            .bio {
                 margin-left:1%;
                 width: 55%;
-            }
-            .rightColoumn {
-                width: 57%;
             }
             #contact {
                 position: relative;
@@ -123,12 +120,12 @@
                 flex-direction: row;
                 height: 100%;
             }
-            #leftCont {
+            #social {
                 width:16vw;
                 flex: 1;
                 list-style-type: none;
             }
-            #rightCont {
+            #official {
                 width:21vw;
                 flex: 1;
                 padding-top:8%;
@@ -139,15 +136,13 @@
                 text-align: right;
                 list-style-type: none;
             }
-            .contactPic {
+            .logos {
                 height: 2vw;
                 width: auto;
             }
-            /*---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-            /*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
             /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
             @media only screen and (orientation: portrait) {
-                #firstPage {
+                #info {
                     display: flex;
                     flex-direction: column;
                 }
@@ -157,16 +152,17 @@
                     font-size:13vw;
                     text-align:center;
                 }
-                #mainPic {
+                #pic {
                     width: 90vw;
                     height: auto;
-                    margin-right: 5vw;
+                    margin-right:auto;
+                    margin-left:auto;
                     margin-top: 110vw;
                     border-radius: 8%;
                     border: 5px solid var(--text-color);
                     box-shadow: 0 0 10px 5px var(--shadow-color);
                 }
-                .leftColoumn {
+                .bio {
                     width: 90vw;
                     height:70vw;
                 }
@@ -196,19 +192,31 @@
                 #smolCont {
                     flex-direction: column;
                     width:95vw;
+                    margin-bottom:0;
                 } 
-                #rightCont {
+                #h {
+                    display:flex;
+                    justify-content:top;
+                    align-items:center;
+                    height: 15vw;
+                    margin-top:0;
+                }
+                #official {
                     text-align: right;
                     width: 60vw;
                     height:100%;
-                    margin-right:39vw;
+                    margin-right:35vw;
+                    margin-top:0;
+                    padding-top:8vw;
                 }
-                #leftCont {
+                #social {
                     text-align: left;
                     width: 60vw;
                     margin-left:48vw;
+                    margin-bottom:0;
+                    padding-bottom:0;
                 }
-                .contactPic {
+                .logos {
                     height: 5vw;
                     width:auto;
                 }
@@ -217,11 +225,11 @@
     </head>
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <body>
-        <div id="firstPage">
+        <div id="info">
             <div id="headerContainer">
                 <h1 class="header"> Krisztian Gal </h1>
             </div>
-            <div class="leftColoumn">
+            <div class="bio">
                 <ul class="text" id="list">
                     <li>Student of <a href="https://www.oulu.fi/en" target="_blank"><img id="uniLogo" src="uni.png"></a></li>
                     <li>Studying Information Processing Science</li>
@@ -232,22 +240,22 @@
                     <li>you can find me in the nature or on the football pitch</li>
                 </ul>
             </div>
-            <img src="me2.jpg" id="mainPic" class="pic">
+            <img src="me2.jpg" id="pic">
         </div> 
         <div id="contact">
             <div id="bgText">Contact</div>
             <div id="smolCont">
                 <div>
-                    <ul class="text" id="leftCont">
-                        <li id="insta"><img src="insta.png" class="contactPic"><a href="https://www.instagram.com/krisztian.fi/" target="_blank"> krisztian.fi</a></li>
-                        <li id="x"><img src="x.png" class="contactPic"><a href="https://x.com/krisztian_fi" target="_blank"> krisztian_fi</a></li>
-                        <li id="github"><img src="github.png" class="contactPic"><a href="https://github.com/krisztiangal" target="_blank"> krisztiangal</a></li>
+                    <ul class="text" id="social">
+                        <li id="insta"><img src="insta.png" class="logos"><a href="https://www.instagram.com/krisztian.fi/" target="_blank"> krisztian.fi</a></li>
+                        <li id="x"><img src="x.png" class="logos"><a href="https://x.com/krisztian_fi" target="_blank"> krisztian_fi</a></li>
+                        <li id="github"><img src="github.png" class="logos"><a href="https://github.com/krisztiangal" target="_blank"> krisztiangal</a></li>
                     </ul>
                 </div>
-                <div>
-                    <ul class="text" id="rightCont">
-                        <li><a href="mailto:contact@krisztian.fi"> contact@krisztian.fi  </a><img src='email.png' class="contactPic"></li>
-                        <li><a href="tel:+358406403037"> +358406403037  </a><img src="phone.png" class="contactPic"></li>
+                <div id="h">
+                    <ul class="text" id="official">
+                        <li><a href="mailto:contact@krisztian.fi"> contact@krisztian.fi  </a><img src='email.png' class="logos"></li>
+                        <li><a href="tel:+358406403037"> +358406403037  </a><img src="phone.png" class="logos"></li>
                     </ul>
                 </div>
             </div>
