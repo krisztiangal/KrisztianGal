@@ -30,7 +30,7 @@
                     --hover-color: #9290C3;
                 }
             }
-            /*-----------------------------------------------------------------------------------------------------------------------------------*/
+            /*-----------------------BASIC---------------------------------------------------------BASIC---------------------------------------------------*/
             body {
                 margin:0;
                 padding:0;
@@ -47,11 +47,11 @@
             a:hover {
                 color: var(--hover-color);
             }
-            /*-------------------------------------------------------------------------------------------------------------------------------------*/
+            /*------------------------MAIN CONTENT------------------------------------------------------------MAIN CONTENT-------------------------------------------------*/
             #pic {
                 width: 40%;
-                margin-top: 0;
-                margin-right: 0;
+                margin-top: 0px;
+                margin-right: 0px;
                 margin-bottom: 2%;
                 height: auto;
                 position: absolute;
@@ -61,6 +61,12 @@
                 border-left: 5px solid var(--text-color);
                 border-bottom: 5px solid var(--text-color);
                 box-shadow: 0 0 10px 5px var(--shadow-color);
+                transition: all 0.3s ease;
+            }
+            #pic:hover {
+                transform: translateY(-5px);
+                transform: translateX(-5px);
+                opacity: 0.85;
             }
             #info {
                 width:100%;
@@ -89,10 +95,39 @@
             #uniLogo {
                 height: auto;
                 width: 50%;
+                transition: all 0.3s ease;
+            }
+            #uniLogo:hover {
+                transform: translateY(+5px);
             }
             .bio {
                 margin-left:1%;
                 width: 55%;
+            }
+            #cv {
+                display: flex;
+                padding-left: 15vw;
+            }
+            .button {
+                    display: inline-block;
+                    font-size: 2vw;
+                }
+            .button a {
+                    display: inline-block;
+                    color: var(--bg-color);
+                    background-color: var(--text-color);
+                    margin-left: 1vw;
+                    margin-top: 0.7vw;
+                    padding: 15% 30%;
+                    border-radius: 1vw;
+                    box-shadow: -5px 5px 5px 0px var(--shadow-color);
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+            }
+            .button a:hover {
+                    background-color: var(--hover-color);
+                    transform: translateY(-2px);
+                    box-shadow: 0 0 5px 5px var(--shadow-color);
             }
             #contact {
                 position: relative;
@@ -140,7 +175,7 @@
                 height: 2vw;
                 width: auto;
             }
-            /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+            /*-----------------------------PORTRAIT MODE---------------------------------------------------------------PORTRAIT MODE-----------------------------------------------------------*/
             @media only screen and (orientation: portrait) {
                 #info {
                     display: flex;
@@ -157,14 +192,45 @@
                     height: auto;
                     margin-right:4vw;
                     margin-left:4vw;
-                    margin-top: 110vw;
-                    border-radius: 8%;
+                    margin-top: 120vw;
+                    border-radius: 8vw;
                     border: 5px solid var(--text-color);
-                    box-shadow: 0 0 10px 5px var(--shadow-color);
+                    box-shadow: -5px 5px 10px 0 var(--shadow-color);
+
                 }
                 .bio {
                     width: 90vw;
                     height:70vw;
+                }
+                #cv {
+                    display: flex;
+                    height: 15vw;
+                    width: 100vw;
+                    margin-top: 0vw;
+                    align-items: center;
+                }
+                .button {
+                    display: inline-block;
+                    /*position:absolute;*/
+                    opacity: 1;
+                    font-size: 5vw;
+                }
+                .button a {
+                    display: inline-block;
+                    color: var(--bg-color);
+                    background-color: var(--text-color);
+                    /*margin-left: 1vw;
+                    margin-top: 0.7vw;*/
+                    padding: 2.5vw 5vw;
+                    border-radius: 3vw;
+                    box-shadow: -5px 5px 5px 0px var(--shadow-color);
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                }
+                .button a:hover {
+                    background-color: var(--hover-color);
+                    transform: translateY(-2px);
+                    box-shadow: 0 0 5px 5px var(--shadow-color);
                 }
                 .text {
                     font-size: 5vw;
@@ -221,9 +287,44 @@
                     width:auto;
                 }
             }
+            /*---------------------------------LOAD ANIMATIONS-------------------------------------------------------------------------------*/
+            @keyframes floatIn {
+                from {
+                opacity: 0;
+                transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    ransform: translateY(0);
+                }
+            }
+            .header {
+                animation: floatIn 1s ease-out;
+            }
+            .bio li {
+                opacity: 0;
+                animation: floatIn 0.5s ease-out forwards;
+            }
+            .bio li:nth-child(1) { animation-delay: 1s; }
+            .bio li:nth-child(2) { animation-delay: 1.2s; }
+            .bio li:nth-child(3) { animation-delay: 1.4s; }
+            .bio li:nth-child(4) { animation-delay: 1.6s; }
+            .bio li:nth-child(5) { animation-delay: 1.8s; }
+            .bio li:nth-child(6) { animation-delay: 2s; }
+            .bio li:nth-child(7) { animation-delay: 2.2s; }
+            #contact {
+    opacity: 0;
+    animation: floatIn 1s ease-out forwards;
+    animation-delay: 2.4s;
+            }
+            #cv {
+                opacity: 0;
+                animation: floatIn 1s ease-out forwards;
+                animation-delay: 2.6s;
+            }
         </style>
     </head>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----------------HTML--------------------------------------------------------HTML----------------------------------------------------------------HTML------------------------------------>
     <body>
         <div id="info">
             <div id="headerContainer">
@@ -239,6 +340,10 @@
                     <li>born in Hungary, living in Finland</li>
                     <li>you can find me in the nature or on the football pitch</li>
                 </ul>
+            </div>
+            <div id="cv">
+                <p class="text">Download my CV </p><div class="button"><a href="englishCV.pdf" download> here</a></div>
+            </div>
             </div>
             <img src="me2.jpg" id="pic">
         </div> 
