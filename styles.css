@@ -1,322 +1,325 @@
 @font-face {
-                font-family: 'Quantify';
-                src: url('fonts/Quantify.ttf');
-                font-weight: 300;
-                font-style: 100%;
-                color: #002D72;
-            }
-            @font-face {
-                font-family: 'Astonpoliz';
-                src: url('fonts/Astonpoliz.ttf');
-                font-weight:200;
-                color: #002D72;
-            }
-            :root {
-                --bg-color: #9290C3;
-                --text-color: #070F2B;
-                --hover-color:#535C91;
-                --shadow-color: rgba(3, 6, 17, 0.5);
-            }
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --bg-color: #070F2B;
-                    --text-color: #535C91;
-                    --shadow-color: rgba(32, 36, 57, 0.8);
-                    --hover-color: #9290C3;
-                }
-            }
-            /*-----------------------BASIC---------------------------------------------------------BASIC---------------------------------------------------*/
-            body {
-                margin:0;
-                padding:0;
-                font-family: 'Astonpoliz';
-                /*overflow-x:hidden;*/
-                background-color: var(--bg-color);
-                color: var(--text-color);
-            }
-            a {
-                color: var(--text-color);
-                text-decoration: none;
-                font-style:italic;
-            }
-            a:hover {
-                color: var(--hover-color);
-            }
-            /*------------------------MAIN CONTENT------------------------------------------------------------MAIN CONTENT-------------------------------------------------*/
-            #pic {
-                width: 40%;
-                margin-top: 0px;
-                margin-right: 0px;
-                margin-bottom: 2%;
-                height: auto;
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                border-bottom-left-radius: 8%;
-                border-left: 5px solid var(--text-color);
-                border-bottom: 5px solid var(--text-color);
-                box-shadow: 0 0 10px 5px var(--shadow-color);
-                transition: all 0.3s ease;
-            }
-            #pic:hover {
-                transform: translateY(-5px);
-                transform: translateX(-5px);
-                opacity: 0.85;
-            }
-            #info {
-                width:100%;
-                padding:0;
-                margin:0;
-                overflow:hidden;
-            }
-            .header {
-                font-size: 6vw;
-                margin: 1% 0 0 7%;
-                font-family: 'Quantify', sans-serif;
-                line-height: 1.7;
-                font-stretch: 110%;
-                font-weight: 180;
-                color: var(--text-color);
-            }
-            #headerContainer {
-                width:90vw;
-            }
-            .text {
-                font-size:2vw;
-                font-family: 'Astonpoliz', sans-serif;
-                color: var(--text-color);
-            }
-            #uniLogo {
-                height: auto;
-                width: 50%;
-                transition: all 0.3s ease;
-            }
-            #uniLogo:hover {
-                transform: translateY(+5px);
-            }
-            .bio {
-                margin-top: 0;
-                margin-left:1%;
-                width: 55%;
-            }
-            #list {
-                line-height: 1.5;
-            }
-            #cv {
-                display: flex;
-                padding-left: 15vw;
-            }
-            .button {
-                    display: inline-block;
-                    font-size: 2vw;
-                }
-            .button a {
-                    display: inline-block;
-                    color: var(--bg-color);
-                    background-color: var(--text-color);
-                    margin-left: 1vw;
-                    margin-top: 0.7vw;
-                    padding: 15% 30%;
-                    border-radius: 1vw;
-                    box-shadow: -5px 5px 5px 0px var(--shadow-color);
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-            }
-            .button a:hover {
-                    background-color: var(--hover-color);
-                    transform: translateY(-2px);
-                    box-shadow: 0 0 5px 5px var(--shadow-color);
-            }
-            #contact {
-                position: relative;
-                /*display:flex;*/
-                overflow: hidden;
-                margin-left:4%;
-                width:42%;
-            }
-            #bgText {
-                position:absolute;
-                width:100%;
-                z-index:-1;
-                top:0;
-                right:0;
-                left:0%;
-                bottom:0;
-                text-align: center;
-                font-size: 10vw;
-                opacity: 0.12;
-                font-family: 'Quantify';
-                font-weight:700;
-            }
-            #smolCont {
-                display:flex;
-                flex-direction: row;
-                height: 100%;
-            }
-            #social {
-                width:16vw;
-                flex: 1;
-                list-style-type: none;
-            }
-            #official {
-                width:21vw;
-                flex: 1;
-                padding-top:8%;
-                margin-left:0;
-                padding-left:0;
-                margin-right:0;
-                padding-right:0;
-                text-align: right;
-                list-style-type: none;
-            }
-            .logos {
-                height: 4vh;
-                width: auto;
-            }
-            /*-----------------------------PORTRAIT MODE---------------------------------------------------------------PORTRAIT MODE-----------------------------------------------------------*/
-            @media only screen and (orientation: portrait) {
-                #info {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .header {
-                    width: 100%;
-                    margin-top:3%;
-                    font-size:13vw;
-                    text-align:center;
-                }
-                #pic {
-                    width: 90vw;
-                    height: auto;
-                    margin-right:4vw;
-                    margin-left:4vw;
-                    margin-top: 140vw;
-                    border-radius: 8vw;
-                    border: 5px solid var(--text-color);
-                    box-shadow: -5px 5px 10px 0 var(--shadow-color);
-
-                }
-                .bio {
-                    width: 90vw;
-                    height:70vw;
-                }
-                #cv {
-                    display: flex;
-                    height: 15vw;
-                    width: 100vw;
-                    margin-top: 20vw;
-                    align-items: center;
-                }
-                .button {
-                    display: inline-block;
-                    /*position:absolute;*/
-                    opacity: 1;
-                    font-size: 5vw;
-                }
-                .button a {
-                    display: inline-block;
-                    color: var(--bg-color);
-                    background-color: var(--text-color);
-                    /*margin-left: 1vw;
-                    margin-top: 0.7vw;*/
-                    padding: 2.5vw 5vw;
-                    border-radius: 3vw;
-                    box-shadow: -5px 5px 5px 0px var(--shadow-color);
-                    text-decoration: none;
-                    transition: all 0.3s ease;
-                }
-                .button a:hover {
-                    background-color: var(--hover-color);
-                    transform: translateY(-2px);
-                    box-shadow: 0 0 5px 5px var(--shadow-color);
-                }
-                .text {
-                    font-size: 5vw;
-                }
-                #contact {
-                    width: 95vw;
-                    height: auto;
-                    margin-top:130vw;
-                    padding:0%;
-                }
-                #bgText {
-                    position:absolute;
-                    width:45vw;
-                    z-index:-1;
-                    top:8vw;
-                    right:0;
-                    left:0%;
-                    bottom:0;
-                    text-align: center;
-                    font-size: 13vw;
-                    opacity: 0.35;
-                    font-family: 'Quantify';
-                    font-weight:500;
-                }
-                #smolCont {
-                    flex-direction: column;
-                    width:95vw;
-                    margin-bottom:0;
-                }
-                #h {
-                    display:flex;
-                    justify-content:top;
-                    align-items:center;
-                    height: 15vw;
-                    margin-top:0;
-                }
-                #official {
-                    text-align: right;
-                    width: 60vw;
-                    height:100%;
-                    margin-right:37vw;
-                    margin-top:0;
-                    padding-top:8vw;
-                }
-                #social {
-                    text-align: left;
-                    width: 60vw;
-                    margin-left:48vw;
-                    margin-bottom:0;
-                    padding-bottom:0;
-                }
-                .logos {
-                    height: 5vw;
-                    width:auto;
-                }
-            }
-            /*---------------------------------LOAD ANIMATIONS-------------------------------------------------------------------------------*/
-            @keyframes floatIn {
-                from {
-                opacity: 0;
-                transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    ransform: translateY(0);
-                }
-            }
-            .header {
-                animation: floatIn 1s ease-out;
-            }
-            .bio li {
-                opacity: 0;
-                animation: floatIn 0.5s ease-out forwards;
-            }
-            .bio li:nth-child(1) { animation-delay: 1s; }
-            .bio li:nth-child(2) { animation-delay: 1.2s; }
-            .bio li:nth-child(3) { animation-delay: 1.4s; }
-            .bio li:nth-child(4) { animation-delay: 1.6s; }
-            .bio li:nth-child(5) { animation-delay: 1.8s; }
-            .bio li:nth-child(6) { animation-delay: 2s; }
-            .bio li:nth-child(7) { animation-delay: 2.2s; }
-            #contact {
-                opacity: 0;
-                animation: floatIn 1s ease-out forwards;
-                animation-delay: 2.4s;
-            }
-            #cv {
-                opacity: 0;
-                animation: floatIn 1s ease-out forwards;
-                animation-delay: 2.6s;
-            }
+    font-family: 'Quantify';
+    src: url('fonts/Quantify.ttf');
+    font-weight: 300;
+    font-style: 100%;
+    color: #002D72;
+}
+@font-face {
+    font-family: 'Astonpoliz';
+    src: url('fonts/Astonpoliz.ttf');
+    font-weight:200;
+    color: #002D72;
+}
+:root {
+    --bg-color: #a89984;
+    --text-color: #3c3836;
+    --hover-color:#98971a;
+    --title-color: #458588;
+    --shadow-color: #504945;
+    --frame-color: #d79921;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #3c3836;
+        --text-color: #d5c4a1;
+        --shadow-color: #665c54;
+        --hover-color: #689d6a;
+        --title-color: #458588;
+        --frame-color: #d79921;
+    }
+}
+/*-----------------------BASIC---------------------------------------------------------BASIC---------------------------------------------------*/
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Astonpoliz';
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-style:italic;
+}
+a:hover {
+    color: var(--hover-color);
+}
+/*------------------------MAIN CONTENT------------------------------------------------------------MAIN CONTENT-------------------------------------------------*/
+#pic {
+    width: 25%;
+    margin-top: 25%;
+    margin-right: 12.5%;
+    margin-bottom: 2%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 8%;
+    border: 5px solid var(--frame-color);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+#info {
+    width:100%;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+.header {
+    font-size: 6vw;
+    margin: 1% 0 0 7%;
+    font-family: 'Quantify', sans-serif;
+    line-height: 1.7;
+    font-stretch: 110%;
+    font-weight: 180;
+    color: var(--title-color);
+}
+#headerContainer {
+    width:90vw;
+    margin: 3% 0 0 12.5%;
+}
+.text {
+    font-size:2vw;
+    font-family: 'Astonpoliz', sans-serif;
+    color: var(--text-color);
+}
+#uniLogo {
+    height: auto;
+    width: 50%;
+    transition: all 0.3s ease;
+}
+#uniLogo:hover {
+    transform: translateY(+5px);
+}
+.bio {
+    margin-top: 0;
+    margin-left:12.5%;
+    width: 50%;
+}
+#list {
+    line-height: 1.5;
+}
+#cv {
+    display: flex;
+    padding-left: 22.5vw;
+}
+.button {
+    display: inline-block;
+    font-size: 2vw;
+}
+.button a {
+    display: inline-block;
+    color: var(--bg-color);
+    background-color: var(--title-color);
+    margin-left: 1vw;
+    margin-top: 0.7vw;
+    padding: 15% 30%;
+    border-radius: 1vw;
+    box-shadow: -5px 5px 5px 0px var(--shadow-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.button a:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 0 5px 5px var(--shadow-color);
+}
+#contact {
+    position: relative;
+    overflow: hidden;
+    margin-left:15%;
+    width:42%;
+}
+#bgText {
+    position:absolute;
+    width:100%;
+    z-index:-1;
+    top:0;
+    right:0;
+    left:0%;
+    bottom:0;
+    text-align: center;
+    font-size: 10vw;
+    opacity: 0.12;
+    font-family: 'Quantify';
+    font-weight:700;
+}
+#smolCont {
+    display:flex;
+    flex-direction: row;
+    height: 100%;
+}
+#social {
+    width:16vw;
+    flex: 1;
+    list-style-type: none;
+}
+#official {
+    width:21vw;
+    flex: 1;
+    padding-top:8%;
+    margin-left:0;
+    padding-left:0;
+    margin-right:0;
+    padding-right:0;
+    text-align: right;
+    list-style-type: none;
+}
+.logos {
+    height: 4vh;
+    width: auto;
+}
+/*-----------------------------PORTRAIT MODE---------------------------------------------------------------PORTRAIT MODE-----------------------------------------------------------*/
+@media only screen and (orientation: portrait) {
+    #info {
+        display: flex;
+        flex-direction: column;
+    }
+    .headerContainer {
+        width: 100vw;
+    }
+    .header {
+        width: 100%;
+        font-size:12vh;
+        margin-left: -3vw;
+    }
+    #pic {
+        width: 70vw;
+        height: auto;
+        margin-right:14vw;
+        margin-left:4vw;
+        margin-top: 140vw;
+        border-radius: 8vw;
+        border: 5px solid var(--frame-color);
+        box-shadow: -5px 5px 10px 0 var(--shadow-color);
+    }
+    .bio {
+        margin-left: 5vw;
+        font-size: 6vh;
+        width: 90vw;
+        height:70vw;
+    }
+    #cv {
+        display: flex;
+        height: 15vw;
+        width: 100vw;
+        margin-top: 20vw;
+        align-items: center;
+    }
+    .button {
+        display: inline-block;
+        opacity: 1;
+        font-size: 5vw;
+    }
+    .button a {
+        display: inline-block;
+        color: var(--bg-color);
+        background-color: var(--title-color);
+        padding: 2.5vw 5vw;
+        border-radius: 3vw;
+        box-shadow: -5px 5px 5px 0px var(--shadow-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        }
+    .button a:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-2px);
+        box-shadow: 0 0 5px 5px var(--shadow-color);
+    }
+    .text {
+        font-size: 5vw;
+    }
+    #contact {
+        width: 95vw;
+        height: auto;
+        margin-top:85vh;
+        padding:0%;
+        margin-left: 5vw;
+    }
+    #bgText {
+        position:absolute;
+        width:45vw;
+        z-index:-1;
+        top:8vw;
+        right:0;
+        left:0%;
+        bottom:0;
+        text-align: center;
+        font-size: 13vw;
+        opacity: 0.25;
+        font-family: 'Quantify';
+        font-weight:500;
+        color: var(--title-color);
+    }
+    #smolCont {
+        flex-direction: column;
+        width:95vw;
+        margin-bottom:0;
+    }
+    #h {
+        display:flex;
+        justify-content:top;
+        align-items:center;
+        height: 15vw;
+        margin-top:0;
+    }
+    #official {
+        text-align: right;
+        width: 60vw;
+        height:100%;
+        margin-right:37vw;
+        margin-top:0;
+        padding-top:8vw;
+    }
+    #social {
+        text-align: left;
+        width: 60vw;
+        margin-left:48vw;
+        margin-bottom:0;
+        padding-bottom:0;
+    }
+    .logos {
+        height: 5vw;
+        width:auto;
+    }
+}
+/*---------------------------------LOAD ANIMATIONS-------------------------------------------------------------------------------*/
+@keyframes floatIn {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        ransform: translateY(0);
+    }
+}
+.header {
+    animation: floatIn 0.5s ease-out;
+}
+.bio li {
+    opacity: 0;
+    animation: floatIn 0.3s ease-out forwards;
+}
+.bio li:nth-child(1) { animation-delay: 0.4s; }
+.bio li:nth-child(2) { animation-delay: 0.6s; }
+.bio li:nth-child(3) { animation-delay: 0.8s; }
+.bio li:nth-child(4) { animation-delay: 1s; }
+.bio li:nth-child(5) { animation-delay: 1.2s; }
+.bio li:nth-child(6) { animation-delay: 1.4s; }
+.bio li:nth-child(7) { animation-delay: 1.6s; }
+#contact {
+    opacity: 0;
+    animation: floatIn 1s ease-out forwards;
+    animation-delay: 2s;
+}
+#cv {
+    opacity: 0;
+    animation: floatIn 1s ease-out forwards;
+    animation-delay: 1.8s;
+}
+#pic {
+    opacity: 0;
+    animation: floatIn 1s ease-out forwards;
+    animation-delay: 1.8s;
+}
