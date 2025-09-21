@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'Quantify';
-    src: url('fonts/Quantify.ttf');
+    font-family: "Quantify";
+    src: url("fonts/Quantify.ttf");
     font-weight: 300;
     font-style: 100%;
-    color: #002D72;
+    color: #002d72;
 }
 @font-face {
-    font-family: 'Astonpoliz';
-    src: url('fonts/Astonpoliz.ttf');
-    font-weight:200;
-    color: #002D72;
+    font-family: "Astonpoliz";
+    src: url("fonts/Astonpoliz.ttf");
+    font-weight: 200;
+    color: #002d72;
 }
 :root {
     --bg-color: #a89984;
@@ -31,9 +31,9 @@
 }
 /*-----------------------BASIC---------------------------------------------------------BASIC---------------------------------------------------*/
 body {
-    margin:0;
-    padding:0;
-    font-family: 'Astonpoliz';
+    margin: 0;
+    padding: 0;
+    font-family: "Astonpoliz";
     background-color: var(--bg-color);
     color: var(--text-color);
     box-sizing: border-box;
@@ -41,7 +41,7 @@ body {
 a {
     color: var(--text-color);
     text-decoration: none;
-    font-style:italic;
+    font-style: italic;
 }
 a:hover {
     color: var(--hover-color);
@@ -61,27 +61,27 @@ a:hover {
     box-shadow: 0 0 10px 5px var(--shadow-color);
 }
 #info {
-    width:100%;
-    padding:0;
-    margin:0;
-    overflow:hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 .header {
     font-size: 6vw;
     margin: 1% 0 0 7%;
-    font-family: 'Quantify', sans-serif;
+    font-family: "Quantify", sans-serif;
     line-height: 1.7;
     font-stretch: 110%;
     font-weight: 180;
     color: var(--title-color);
 }
 #headerContainer {
-    width:90vw;
+    width: 90vw;
     margin: 3% 0 0 12.5%;
 }
 .text {
-    font-size:2vw;
-    font-family: 'Astonpoliz', sans-serif;
+    font-size: 2vw;
+    font-family: "Astonpoliz", sans-serif;
     color: var(--text-color);
 }
 #uniLogo {
@@ -94,7 +94,7 @@ a:hover {
 }
 .bio {
     margin-top: 0;
-    margin-left:12.5%;
+    margin-left: 12.5%;
     width: 50%;
 }
 #list {
@@ -128,45 +128,45 @@ a:hover {
 #contact {
     position: relative;
     overflow: hidden;
-    margin-left:15vw;
-    width:42vw;
+    margin-left: 15vw;
+    width: 42vw;
 }
 #bgText {
-    position:absolute;
-    width:100%;
-    z-index:-1;
-    top:2vh;
-    right:0;
-    left:-5%;
-    bottom:0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 2vh;
+    right: 0;
+    left: -5%;
+    bottom: 0;
     text-align: center;
     font-size: 9vw;
     opacity: 0.12;
-    font-family: 'Quantify';
-    font-weight:900;
+    font-family: "Quantify";
+    font-weight: 900;
     transform: scale(1.1);
     letter-spacing: -0.02em;
 }
 #smolCont {
-    display:flex;
+    display: flex;
     flex-direction: row;
     margin-left: 2vw;
 }
 #social {
-    width:13vw;
+    width: 13vw;
     flex: 1;
     list-style-type: none;
     padding: 4% 0 0 0;
 }
 #official {
-    margin-right:0;
-    width:auto;
+    margin-right: 0;
+    width: auto;
     flex: 1;
-    padding-top:12%;
-    margin-left:0;
-    padding-left:0;
-    margin-right:0;
-    padding-right:0;
+    padding-top: 12%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
     text-align: right;
     list-style-type: none;
 }
@@ -175,7 +175,7 @@ a:hover {
     width: auto;
 }
 /*-----------------------------PORTRAIT MODE---------------------------------------------------------------PORTRAIT MODE-----------------------------------------------------------*/
-@media(max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1) {
     #info {
         display: flex;
         flex-direction: column;
@@ -185,15 +185,15 @@ a:hover {
     }
     .header {
         width: 100%;
-        font-size:12vw;
+        font-size: 12vw;
         margin-left: -3vw;
     }
     #pic {
         position: relative;
         width: 70vw;
         height: auto;
-        margin-right:15vw;
-        margin-left:15vw;
+        margin-right: 15vw;
+        margin-left: 15vw;
         margin-top: 5vh;
         border-radius: 8vw;
         border: 5px solid var(--frame-color);
@@ -203,13 +203,13 @@ a:hover {
         margin-left: 5vw;
         font-size: 6vh;
         width: 90vw;
-        height:70vw;
+        height: 70vw;
     }
     #cv {
         display: flex;
         height: 15vw;
         width: 100vw;
-        margin-top: 20vw;
+        margin-top: 30vw;
         align-items: center;
     }
     .button {
@@ -226,7 +226,7 @@ a:hover {
         box-shadow: -5px 5px 5px 0px var(--shadow-color);
         text-decoration: none;
         transition: all 0.3s ease;
-        }
+    }
     .button a:hover {
         background-color: var(--hover-color);
         transform: translateY(-2px);
@@ -240,62 +240,62 @@ a:hover {
         width: 95vw;
         height: auto;
         margin-top: 0vh;
-        padding:0%;
+        padding: 0%;
         margin-left: 5vw;
     }
     #bgText {
-        position:absolute;
-        width:45vw;
-        z-index:-1;
+        position: absolute;
+        width: 45vw;
+        z-index: -1;
         top: 9vw;
-        right:0;
-        left:2vw;
-        bottom:0;
+        right: 0;
+        left: 2vw;
+        bottom: 0;
         text-align: center;
         font-size: 12vw;
         opacity: 0.25;
-        font-family: 'Quantify';
-        font-weight:400;
+        font-family: "Quantify";
+        font-weight: 400;
         letter-spacing: 0;
         color: var(--title-color);
     }
     #smolCont {
         flex-direction: column;
-        width:95vw;
-        margin-bottom:7vh;
+        width: 95vw;
+        margin-bottom: 7vh;
     }
     #h {
-        display:flex;
-        justify-content:top;
-        align-items:center;
+        display: flex;
+        justify-content: top;
+        align-items: center;
         height: 15vw;
-        margin-top:0;
+        margin-top: 0;
     }
     #official {
         text-align: right;
         width: 60vw;
-        margin-right:39vw;
-        margin-top:0;
-        padding-top:8vw;
+        margin-right: 39vw;
+        margin-top: 0;
+        padding-top: 8vw;
     }
     #social {
         text-align: left;
         padding-left: 7vw;
         width: 60vw;
-        margin-left:44vw;
-        margin-bottom:0;
-        padding-bottom:0;
+        margin-left: 44vw;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .logos {
         height: 5vw;
-        width:auto;
+        width: auto;
     }
 }
 /*---------------------------------LOAD ANIMATIONS-------------------------------------------------------------------------------*/
 @keyframes floatIn {
     from {
-    opacity: 0;
-    transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -309,13 +309,30 @@ a:hover {
     opacity: 0;
     animation: floatIn 0.3s ease-out forwards;
 }
-.bio li:nth-child(1) { animation-delay: 0.4s; }
-.bio li:nth-child(2) { animation-delay: 0.6s; }
-.bio li:nth-child(3) { animation-delay: 0.8s; }
-.bio li:nth-child(4) { animation-delay: 1s; }
-.bio li:nth-child(5) { animation-delay: 1.2s; }
-.bio li:nth-child(6) { animation-delay: 1.4s; }
-.bio li:nth-child(7) { animation-delay: 1.6s; }
+.bio li:nth-child(1) {
+    animation-delay: 0.4s;
+}
+.bio li:nth-child(2) {
+    animation-delay: 0.6s;
+}
+.bio li:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.bio li:nth-child(4) {
+    animation-delay: 1s;
+}
+.bio li:nth-child(5) {
+    animation-delay: 1.2s;
+}
+.bio li:nth-child(6) {
+    animation-delay: 1.4s;
+}
+.bio li:nth-child(7) {
+    animation-delay: 1.6s;
+}
+.bio li:nth-child(8) {
+    animation-delay: 1.8s;
+}
 #contact {
     opacity: 0;
     animation: floatIn 1s ease-out forwards;
